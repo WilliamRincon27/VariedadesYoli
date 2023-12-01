@@ -8,11 +8,14 @@ html{
     padding: 0;
     font-family: 'calibri';
     font-size: 20px;
+    list-style: none;
+    text-decoration: none;
 }
 
 body{
     background-image: linear-gradient(190deg, #f4ff97 0, #dfff99 12.5%, #c9ff9b 25%, #b3fe9d 37.5%, #9df29d 50%, #89e69d 62.5%, #76db9d 75%, #65d19e 87.5%, #56c89f 100%);
     height: 100%;
+    background-attachment: fixed;
 }
 
 .header{
@@ -21,8 +24,267 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
+.tHeader{
+    color: #0485dc;
+    font-size: 500;
+    margin-left: 50px;
+    
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: rgb(235, 235, 248);
+    padding: 30px 0;
+}
+
+.wrapper .sidebar h2{
+    color: #29323d;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+}
+
+.wrapper .sidebar ul li a{
+    color: #29323d;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background: #87acdd;
+    transition: 0.5s;
+}
+
+.wrapper .main_content{
+    width: 100%;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+.wrapper .main_content .header_sidebar{
+    padding: 20px;
+    color: #0485dc;
+}
+
+.wrapper .main_content .info{
+    margin: 20px;
+    color: #29323d;
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+    margin-bottom:20px;
+}
+
+/*========================Lista Productos========================*/
+
+.main_content h1{
+    font-size: 35px;
+    display: inline-block;
+}
+
+.btn_new{
+    display: inline-block;
+    background-color: #1e8f9e;
+    color: #fff;
+    padding: 5px 25px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.btn_new:hover{
+    background-color: #1e8e94b0;
+    transition: 0.5s;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 12pt;
+    font-family: 'arial';
+    width: 100%;
+}
+
+table th{
+    text-align: left;
+    padding: 10px;
+    background: #3d7ba8;
+    color: #fff;
+}
+
+table tr:nth-child(odd){
+    background: #ffffff80;
+}
+
+table td{
+    padding: 10px;
+}
+
+.link_edit{
+    color: #0ca4ce;
+}
+
+.link_delete{
+    color: #f26b6b;
+}
+
+/*========================Crear Productos========================*/
+
+.form_register{
+    width: 480px;
+    margin: auto;
+}
+
+.form_register h1{
+    color: #3c93b0;
+}
+
+hr{
+    border: 0;
+    background: #ccc;
+    height: 1px;
+    margin: 10px;
+    display: block;
+}
+
+form{
+    background: #fff;
+    margin: auto;
+    padding: 20px 50px;
+    border: 1px solid #d1d1d1;
+}
+
+label{
+    display: block;
+    font-size: 12pt;
+    margin: 15px auto 5px auto;
+}
+
+input{
+    display: block;
+    width: 100%;
+    font-size: 11pt;
+    padding: 5px;
+    border: 1px solid #85929e;
+    border-radius: 5px;
+}
+
+.btn_save{
+    font-size: 12pt;
+    background: #12a4c6;
+    padding: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    margin: 15px auto; 
+}
+
+.alert{
+    width: 100%;
+    background: #66e07d66;
+    border-radius: 6px;
+    margin: 20px auto;
+}
+
+.msg_error{
+    color: #e65656;
+}
+
+.msg_save{
+    color: #12a4c6;
+}
+
+.alert p{
+    padding: 10px;
+}
+
+.data_delete{
+    text-align: center;
+}
+
+.data_delete h2{
+    font-size: 12pt;
+}
+
+.data_delete span{
+    font-weight: bold;
+    color: #4f72d4;
+    font-size: 12pt;
+}
+
+.btn_cancel, .btn_ok{
+    width: 125px;
+    background: #478ba2;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.btn_cancel{
+    background: #42b343;
+}
+
+.btn_ok{
+    height: 37px;
+    background: #e65656;
+    font-family: 'calibri';
+}
+
+.data_delete form{
+    background: initial;
+    margin: auto;
+    padding: 20px 50px;
+    border: 0;
+}
+
+/*===================Formulario Buscar===================*/
+
+.form_search{
+    display: -webkit-flex;
+    display: -mooz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    float: right;
+    background: initial;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form_search .btn_search{
+    background: #1faac8;
+    color: #fff;
+    padding: 0 20px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* 
 .header .nav-links{
     list-style: none;
 }
@@ -45,5 +307,5 @@ body{
 
 .header .nav-links li a:hover{
     color: #89e69d;
-}
+} */
 
