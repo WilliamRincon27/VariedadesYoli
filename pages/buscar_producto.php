@@ -36,7 +36,7 @@
                 <h2>Menu</h2>
                 <ul>
                     <li><a href="productos.php"><i class="fa-solid fa-box"></i>  Productos</a></li>
-                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proovedores</i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proveedores</i></a></li>
                     <li><a href="#"><i class="fa-solid fa-users"></i>  Usuarios</a></li>
                     <li><a href="#"><i class="fa-solid fa-user-large"></i>  Clientes</a></li>
                     <li><a href="#"><i class="fa-regular fa-file"></i>  Reportes</a></li>

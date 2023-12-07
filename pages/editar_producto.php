@@ -89,7 +89,7 @@
                 <h2>Menu</h2>
                 <ul>
                     <li><a href="productos.php"><i class="fa-solid fa-box"></i>  Productos</a></li>
-                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proovedores</i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proveedores</i></a></li>
                     <li><a href="#"><i class="fa-solid fa-users"></i>  Usuarios</a></li>
                     <li><a href="#"><i class="fa-solid fa-user-large"></i>  Clientes</a></li>
                     <li><a href="#"><i class="fa-regular fa-file"></i>  Reportes</a></li>
@@ -109,7 +109,7 @@
                             <label for="nombre">Nombre Producto</label>
                             <input type="text" name="nombre" id="nombre" value="<?php echo $nombre; ?>" placeholder="Nombre del Producto">
                             <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" value="<?php echo $precio; ?>" placeholder="Precio del Producto">
+                            <input type="number" step="0.01" name="precio" id="precio" value="<?php echo $precio; ?>" placeholder="Precio del Producto">
                             <label for="proovedor">Proovedor</label>
                             <input type="text" name="proovedor" id="proovedor" value="<?php echo $proovedor; ?>" placeholder="Proveedor">
                             <label for="existencia">Existencias</label>
