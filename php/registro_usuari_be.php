@@ -2,14 +2,13 @@
     include 'conexion_be.php';
     
     $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
     $email = $_POST['email'];
     $contrasena = $_POST['password'];
     $identificacion = $_POST['identificacion'];
     $telefono = $_POST['telefono'];
 
-    $query = "INSERT INTO usuarios(Identificacion , nombre, apellido, email, contrasena, telefono) 
-              VALUES('$identificacion', '$nombre', '$apellido', '$email', '$contrasena', '$telefono')";
+    $query = "INSERT INTO usuarios(Identificacion , nombre, email, contrasena, telefono) 
+              VALUES('$identificacion', '$nombre', '$email', '$contrasena', '$telefono')";
 
     $ejecutar = mysqli_query($conexion, $query);
 

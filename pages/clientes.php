@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/dash.css">
     <script src="https://kit.fontawesome.com/071e681d3e.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Clientes</title>
 </head>
 <body>
     <header class="header">
@@ -35,36 +35,37 @@
             <div class="sidebar">
                 <h2>Menu</h2>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-box"></i>  Productos</a></li>
-                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proveedores</i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-users"></i>  Usuarios</a></li>
-                    <li><a href="#"><i class="fa-solid fa-user-large"></i>  Clientes</a></li>
-                    <li><a href="#"><i class="fa-regular fa-file"></i>  Reportes</a></li>
-                    <li><a href="../php/cerrar_sesion.php"><i class="fa-solid fa-right-from-bracket"></i>  Cerrar sesion</a></li>
+                    <li><a href="productos.php"><i class="fa-solid fa-box"></i>Productos</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i>Proveedores</i></a></li>
+                    <li><a href="usuarios.php"><i class="fa-solid fa-users"></i>Usuarios</a></li>
+                    <li><a href="clientes.php"><i class="fa-solid fa-user-large"></i>Clientes</a></li>
+                    <li><a href="venta.php"><i class="fa-solid fa-cart-shopping"></i>Nueva Venta</a></li>
+                    <li><a href="#"><i class="fa-regular fa-file"></i>Reportes</a></li>
+                    <li><a href="../php/cerrar_sesion.php"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a></li>
                 </ul>
             </div>
             <div class="main_content">
                 <div class="header_sidebar">Bienvenido al panel de geston de Variedades Yoli</div>
                 <div class="info">
-                    <h1>Lista de Productos</h1>
-                    <a href="crear_producto.php" class="btn_new">Crear Producto</a>
+                    <h1>Lista de Clientes</h1>
+                    <a href="crear_cliente.php" class="btn_new">Crear Cliente</a>
 
-                    <form action="buscar_producto.php" method="get" class="form_search">
+                    <form action="buscar_cliente.php" method="get" class="form_search">
                         <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
                         <input type="submit" value="Buscar" class="btn_search">
                     </form>
 
                     <table>
                         <tr>
-                            <th>ID</th>
-                            <th>Descripcion</th>
-                            <th>Proveedor</th>
-                            <th>Precio</th>
-                            <th>Existencias</th>
+                            <th>#</th>
+                            <th>Identificacion</th>
+                            <th>nombre</th>
+                            <th>Telefono</th>
+                            <th>Direccion</th>
                             <th>Acciones</th>
                         </tr>
                         <?php
-                            $query = mysqli_query($conexion, "SELECT * FROM producto");
+                            $query = mysqli_query($conexion, "SELECT * FROM cliente");
                             $result = mysqli_num_rows($query);
 
                             if($result > 0){
@@ -72,15 +73,15 @@
                              
                         ?>        
                                     <tr>
-                                        <td><?php echo $data["codProducto"];?></td>
-                                        <td><?php echo $data["descripcion"];?></td>
-                                        <td><?php echo $data["proovedor"];?></td>
-                                        <td><?php echo $data["precio"];?></td>
-                                        <td><?php echo $data["existencia"];?></td>
+                                        <td><?php echo $data["idCliente"];?></td>
+                                        <td><?php echo $data["identificacion"];?></td>
+                                        <td><?php echo $data["nombre"];?></td>
+                                        <td><?php echo $data["telefono"];?></td>
+                                        <td><?php echo $data["direccion"];?></td>
                                         <td>
-                                            <a class="link_edit" href="editar_producto.php?id=<?php echo $data["codProducto"];?>">Editar</a>
+                                            <a class="link_edit" href="editar_cliente.php?id=<?php echo $data["idCliente"];?>">Editar</a>
                                             |
-                                            <a class="link_delete" href="eliminar_confirmar_producto.php?id=<?php echo $data["codProducto"];?>">Eliminar</a>
+                                            <a class="link_delete" href="eliminar_confirmar_cliente.php?id=<?php echo $data["idCliente"];?>">Eliminar</a>
                                         </td>
                                     </tr>
                         <?php        

@@ -35,12 +35,13 @@
             <div class="sidebar">
                 <h2>Menu</h2>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-box"></i>  Productos</a></li>
-                    <li><a href="#"><i class="fa-solid fa-gears"></i>  Proveedores</i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-users"></i>  Usuarios</a></li>
-                    <li><a href="#"><i class="fa-solid fa-user-large"></i>  Clientes</a></li>
-                    <li><a href="#"><i class="fa-regular fa-file"></i>  Reportes</a></li>
-                    <li><a href="../php/cerrar_sesion.php"><i class="fa-solid fa-right-from-bracket"></i>  Cerrar sesion</a></li>
+                <li><a href="productos.php"><i class="fa-solid fa-box"></i>Productos</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i>Proveedores</i></a></li>
+                    <li><a href="usuarios.php"><i class="fa-solid fa-users"></i>Usuarios</a></li>
+                    <li><a href="clientes.php"><i class="fa-solid fa-user-large"></i>Clientes</a></li>
+                    <li><a href="venta.php"><i class="fa-solid fa-cart-shopping"></i>Nueva Venta</a></li>
+                    <li><a href="#"><i class="fa-regular fa-file"></i>Reportes</a></li>
+                    <li><a href="../php/cerrar_sesion.php"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesion</a></li>
                 </ul>
             </div>
             <div class="main_content">
